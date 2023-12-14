@@ -17,7 +17,7 @@ const instance = createInstance({
     },
   },
   requestPilets() {
-    return Promise.resolve([]);
+    return fetch('./pilets.json').then(res => res.json());
   },
 });
 
