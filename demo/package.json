@@ -4,6 +4,7 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "npm run start --workspace=christmas-demo-app"
+    "start": "npm run start --workspace=christmas-demo-app",
+    "start-all": "pilet debug packages/browse packages/search packages/profile packages/watch"
   }
 }

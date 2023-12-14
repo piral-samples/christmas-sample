@@ -1,8 +1,8 @@
 import * as React from "react";
+import { ExtensionSlot } from "piral-core";
 import Logo from "./Logo";
 import Footer from "./Footer";
 import GeneralMenu from "./GeneralMenu";
-import HeaderItems from "./HeaderItems";
 import Loading from "./Loading";
 
 interface LayoutProps {
@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
       <header className="Header">
         <Logo />
         <GeneralMenu />
-        <HeaderItems />
+        <ExtensionSlot name="header-items" />
       </header>
       <React.Suspense fallback={<Loading />}>
         {children}

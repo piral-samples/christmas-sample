@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "The code for the notflix demo.",
   "keywords": [],
-  "main": "src/index.ts",
+  "main": "src/index.tsx",
+  "importmap": {
+    "imports": {},
+    "inherit": ["christmas-demo-app"]
+  },
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
@@ -12,9 +16,12 @@
   },
   "scripts": {},
   "devDependencies": {
+    "christmas-demo-app": "1.0.0",
     "@types/node": "latest",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "piral-cli": "1.4.1",
+    "piral-cli-vite": "1.0.3",
     "typescript": "latest"
   }
 }
