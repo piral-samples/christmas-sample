@@ -1,23 +1,30 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { Piral, createInstance } from "piral-core";
 import { BrowsePage } from "christmas-demo-browse";
 import { WatchPage, MovieTile } from "christmas-demo-watch";
 import { ProfilePage } from "christmas-demo-profile";
 import Layout from "./components/Layout";
+import Loading from "./components/Loading";
 
 const root = createRoot(document.querySelector("#app"));
+const instance = createInstance({
+  state: {
+    components: {
+      Layout,
+      LoadingIndicator: Loading,
+    },
+    routes: {
+      "/": () => <Navigate to="/browse" />,
+      "/browse": () => <BrowsePage MovieTile={MovieTile} />,
+      "/profile": () => <ProfilePage />,
+      "/watch/:media_type/:video_id": () => <WatchPage />,
+    },
+  },
+  requestPilets() {
+    return Promise.resolve([]);
+  },
+});
 
-
-root.render(
-  <BrowserRouter>
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Navigate to="/browse" />} />
-        <Route path="/browse" element={<BrowsePage MovieTile={MovieTile} />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/watch/:media_type/:video_id" element={<WatchPage />} />
-      </Routes>
-    </Layout>
-  </BrowserRouter>
-);
+root.render(<Piral instance={instance} />);

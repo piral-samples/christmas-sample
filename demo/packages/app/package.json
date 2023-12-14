@@ -3,26 +3,32 @@
   "version": "1.0.0",
   "description": "The code for the notflix demo.",
   "keywords": [],
+  "app": "./src/index.html",
+  "importmap": {
+    "imports": {},
+    "inherit": ["piral-base", "piral-core"]
+  },
   "dependencies": {
     "christmas-demo-browse": "1.0.0",
     "christmas-demo-profile": "1.0.0",
     "christmas-demo-search": "1.0.0",
     "christmas-demo-watch": "1.0.0",
+    "piral-core": "1.4.1",
     "react": "^18",
     "react-dom": "^18",
     "react-router": "^6",
     "react-router-dom": "^6"
   },
   "scripts": {
-    "start": "vite dev",
-    "build": "vite build"
+    "start": "piral debug",
+    "build": "piral build"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "sass": "^1.69.5",
-    "vite": "^5",
+    "piral-cli": "1.4.1",
+    "piral-cli-vite": "1.0.3",
     "typescript": "latest"
   }
 }
