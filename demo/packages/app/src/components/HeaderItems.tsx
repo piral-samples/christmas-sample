@@ -1,7 +1,7 @@
 import * as React from "react";
-import MovieTile from "../watch/MovieTile";
-import SearchExtension from "../search/SearchExtension";
-import ProfileExtension from "../profile/ProfileExtension";
+import { MovieTile } from "christmas-demo-watch";
+import { SearchExtension } from "christmas-demo-search";
+import { ProfileExtension } from "christmas-demo-profile";
 
 const HeaderItems: React.FC = () => {
   return (

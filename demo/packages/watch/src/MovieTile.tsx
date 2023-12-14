@@ -1,18 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-
-interface MovieData {
-  backdrop: string;
-  title: string;
-  score: string;
-  overview: string;
-  movieId: string;
-  media_type: "tv" | "movie";
-}
-
-interface MovieTileProps extends MovieData {
-  Buttons?: React.ComponentType<MovieData>;
-}
+import type { MovieTileProps } from "./types";
 
 const Noop = () => null;
 
