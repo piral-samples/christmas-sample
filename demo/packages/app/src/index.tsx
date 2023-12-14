@@ -17,7 +17,11 @@ const instance = createInstance({
     },
   },
   requestPilets() {
-    return fetch('./pilets.json').then(res => res.json());
+    return fetch(
+      "https://feed.piral.cloud/api/v1/pilet/munichjs-christmas-demo"
+    )
+      .then((res) => res.json())
+      .then((data) => data.items);
   },
 });
 

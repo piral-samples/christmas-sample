@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "The code for the notflix demo.",
   "keywords": [],
-  "main": "src/index.tsx",
+  "main": "dist/index.js",
+  "source": "src/index.tsx",
   "importmap": {
     "imports": {},
     "inherit": ["christmas-demo-app"]
@@ -14,7 +15,9 @@
     "react-router": "^6",
     "react-router-dom": "^6"
   },
-  "scripts": {},
+  "scripts": {
+    "deploy": "pilet publish --fresh --url $URL --api-key $API_KEY"
+  },
   "devDependencies": {
     "christmas-demo-app": "1.0.0",
     "@types/node": "latest",
