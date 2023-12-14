@@ -1,0 +1,15 @@
+{
+  "name": "talk",
+  "version": "1.0.0",
+  "description": "The presentation for the meetup.",
+  "scripts": {
+    "start": "PORT=8000 marp -s ./src",
+    "build": "marp ./src/presentation.md -o dist/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@marp-team/marp-cli": "3.4.0"
+  }
+}
