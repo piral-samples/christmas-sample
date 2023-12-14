@@ -1,0 +1,44 @@
+{
+  "name": "other-demo",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "pilet"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/node": "latest",
+    "typescript": "latest",
+    "@dbeining/react-atom": "latest",
+    "@libre/atom": "latest",
+    "history": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router": "6.20.1",
+    "react-router-dom": "6.20.1",
+    "tslib": "2.6.2",
+    "path-to-regexp": "latest",
+    "piral-cli": "1.4.0",
+    "piral-cli-esbuild": "latest"
+  },
+  "peerDependencies": {},
+  "scripts": {
+    "start": "pilet debug",
+    "build": "pilet build",
+    "upgrade": "pilet upgrade",
+    "postinstall": "pilet declaration"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "importmap": {
+    "inherit": [
+      "christmas-demo-app"
+    ],
+    "imports": {}
+  },
+  "source": "src/index.tsx"
+}

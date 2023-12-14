@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react";
 import { HeroData, ShowCaseData } from "./types";
 
 export interface BrowseProps {
-  FavoritesButton?: FC<FavoritesButtonProps>;
+  Buttons?: FC<FavoritesButtonProps>;
   MovieTile?: FC<MovieTileProps>;
 }
 

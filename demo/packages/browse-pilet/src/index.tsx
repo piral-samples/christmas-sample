@@ -11,7 +11,11 @@ export function setup(api: PiletApi) {
     <api.Extension name="movie-tile" params={props} />
   );
 
+  const Buttons = (props) => (
+    <api.Extension name="movie-buttons" params={props} />
+  );
+
   api.registerExtension("menu", () => <Link to="/browse">Browse</Link>);
 
-  api.registerPage("/browse", () => <BrowsePage MovieTile={MovieTile} />);
+  api.registerPage("/browse", () => <BrowsePage MovieTile={MovieTile} Buttons={Buttons} />);
 }

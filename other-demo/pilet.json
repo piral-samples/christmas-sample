@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "v2",
+  "piralInstances": {
+    "christmas-demo-app": {
+      "selected": true,
+      "url": "http://localhost:8080/emulator.json"
+    }
+  }
+}

@@ -10,11 +10,11 @@ const Noop = () => null;
 
 const BrowsePage: React.FC<BrowseProps> = ({
   MovieTile = Noop,
-  FavoritesButton = Noop,
+  Buttons = Noop,
 }) => (
   <div className="Browse">
     <Hero {...herodata}>
-      <FavoritesButton full {...herodata} />
+      <Buttons full {...herodata} />
     </Hero>
     {showcasesdata.map((data, i) => (
       <Showcase MovieTile={MovieTile || Noop} {...data} key={i} />
